@@ -1,3 +1,6 @@
+from src.connector import Connector
+
+
 if __name__ == '__main__':
     print()
     print('Привет, данная программа поможет подобрать тебе твою будущую работу')
