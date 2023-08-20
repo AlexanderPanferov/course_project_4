@@ -15,3 +15,15 @@ if __name__ == '__main__':
     if user_choise == "0":
         print("Завершение работы программы...")
         exit()
+
+    user_speciality = input('Введите специальность:').lower()
+
+    vacancies = None
+    connect = Connector(user_speciality)
+    if user_choise == "1":
+        try:
+            connect.connectHH()
+        except IndexError:
+            print("Cпециальность не найдена")
+            quit()
+        vacancies = connect.select_HH()
